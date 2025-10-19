@@ -1,6 +1,6 @@
 html, body{
-  --color1: #74121D; //dark
-  --color2: #D5C5C8; //light
+  --color1: #74121D; 
+  --color2: #D5C5C8; 
   background: --color1;
   color: --color2;
 }
