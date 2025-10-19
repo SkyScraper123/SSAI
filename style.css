@@ -1,0 +1,6 @@
+html{
+  --color1: #74121D; //dark
+  --color2: #D5C5C8; //light
+  background: --color1;
+  color: --color2;
+}
