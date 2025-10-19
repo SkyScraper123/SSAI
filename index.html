@@ -3,6 +3,7 @@
     <head>
         <title>SSAI</title>
         <link rel="stylesheet" href="style.css">
+        <script src="/script.js" defer></script>
     </head>
     <body>
         <div id="home">
@@ -14,5 +15,100 @@
             <h1></h1>
             <h2 id="ans"></h2>
         </div>
+        <div class="sidebar">
+      <button class="sidebar-btn">x</button>
+      <nav>
+        <a href="#" page-id="home"><div>Home</div></a>
+        <a href="#" page-id="list"><div>Vocab List</div></a>
+        <a href="#" page-id="test"><div>Vocab Test</div></a>
+        <!--
+        <a href="#" page-id=""><div></div></a>
+        -->
+      </nav>
+    </div>
+    <div class="header flex">
+      <button class="sidebar-btn">☰</button>
+      <header>HOME</header>
+    </div>
+    <div class="main">
+      <section class="container page" id="home-page">
+        <span class="datetime">
+          <div id="day"></div>
+          <div id="time"></div>
+          <div id="date"></div>
+        </span>
+        <span class="flex">
+          <a href="#" page-id="list"><div class="options">Vocab List</div></a>
+          <a href="#" page-id="test"><div class="options">Vocab Test</div></a> 
+        </span>
+      </section>
+      <section class="container page" id="list-page">
+        <h1>Create your own vocabulary list</h1>
+        <div>
+          <div class="flex">
+            <input type="text" id="current-list" onkeydown="updateListName(event)">
+            <div class="container">
+              <button class="controls" onclick="deleteList()">—</button>
+              <button class="controls" onclick="collapsibleList()" id="main-list-btn">▼</button>
+            </div>
+          </div>
+          <div class="collapsible-list vocab-lists" id="main-list"></div>
+          <button class="collapsible-list controls" onclick="addList()">Add new list</button>
+        </div>
+        <br>
+        <div class="scrollbar">
+          <table>
+            <thead>
+              <tr><th>WORD</th><th>MEANING</th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input name="word[]"></td>
+                <td><input name="meaning[]"></td>
+                <td class="container">
+                  <button class="controls" onclick="deleteRow(this)">-</button>
+                  <button class="controls" onclick="addRowBelow(this)">+</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="container hideContent">
+          <button class="options" onclick="saveData()">SAVE</button>
+          <button class="options" onclick="loadData()">LOAD</button>
+          <button class="options" onclick="clearData()">CLEAR</button>          
+        </div>
+      </section>
+      <section class="container page" id="test-page">
+        <h1 id="test-state">Select a list</h1>
+        <div id="iterate-list">
+          <br>
+          <button class="controls" onclick="iterateList(-1)">◄</button>
+          <input id="show-current" disabled>
+          <button class="controls" onclick="iterateList(+1)">►</button>
+        </div>
+        <button class="options" id="start-test" onclick="startTest()">START TEST</button>
+        <div class="container testStart">
+          <button class="options" id="change-word" onclick="randomWord()">CHANGE WORD</button>
+          <button class="options" id="end-test" onclick="endTest()">END TEST</button>
+          <div class="side flex">
+            <div id="square-box"></div>
+            <div id="show-ans" onmouseover="showAns()" onmouseout="hideAns()">Show Answer</div>
+          </div>
+          <h2 id="show-meaning"></h2>
+          <div class="scrollbar" id="input-log"></div>
+          <input type="text" id="user-input" onkeydown="submitAnswer(event)">
+        </div>
+      </section>
+      <!--
+      <section class="container page" id="-page"></section>
+      -->
+      
+      <section class="background">
+        <div class="circle"></div>
+        <div class="triangle"></div>
+        <div class="parallelogram"></div>
+      </section>
+    </div>
     </body>
 </html>
