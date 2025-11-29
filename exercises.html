@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Exercises</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link">&larr; Back to Home</a>
+            <div class="page-header">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 1 0 .836L16 20.8A2 2 0 0 1 14 19V5a2 2 0 0 1 2-2h-1"/><path d="m8 13-5.223 3.482a.5.5 0 0 0 0 .836L8 20.8A2 2 0 0 0 10 19V5a2 2 0 0 0-2-2h1"/></svg>
+                </div>
+                <div>
+                    <h1>Interactive Exercises</h1>
+                    <p>Reinforce your understanding of key concepts with hands-on coding challenges, logic puzzles, and more.</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-wrapper">
+            <aside id="ex-list" class="item-list"></aside>
+            <section id="ex-content" class="item-content">
+                <div class="card">
+                    <div class="card-content">
+                        <p>Select an exercise from the list to begin.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="exercises.js"></script>
+</body>
+</html>
